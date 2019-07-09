@@ -35,19 +35,19 @@ class OrientationCreate extends React.Component {
                 <h4 className="text-center text-white" style={{ marginTop: 20 }} >Cadastrar orientação</h4>
                 <form onSubmit={this.submit}>
                     <div className="form-group">
-                        <label htmlFor="name">Nome</label>
+                        <label htmlFor="name">Nome*</label>
                         <input type="text" className="form-control" name="name" id="name" placeholder="Inserir nome do Aluno"
                             value={this.state.name} onChange={this.onChange} />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="thema">Tema</label>
+                        <label htmlFor="thema">Tema*</label>
                         <input type="text" className="form-control" name="thema" id="thema" placeholder="Inserir tema da orientação"
                             value={this.state.thema} onChange={this.onChange} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="idTheacher">Professor*</label>
                         <select required name="idTheacher" value={this.state.idTheacher} onChange={this.onChange} className="custom-select">
-                            <option disabled selected>Selecione um professor orientador</option>
+                            <option value="" selected>Selecione um professor orientador</option>
                             {this.props.teachers.map(t => {
                                 return (<option value={t._id}>{t.name}</option>)
                             })}

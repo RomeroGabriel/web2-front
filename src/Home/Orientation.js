@@ -38,7 +38,6 @@ class OrientationList extends React.Component {
 
     deleteOrientation = (id) => {
         axios.delete('http://localhost:8080/orientation/delete/' + id).then(res => {
-            // alert("Tudo certo");
             this.props.getOrientation();
         }, err => {
             alert("Erro ao excluir orientação")

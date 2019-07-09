@@ -35,17 +35,17 @@ class TeacherCreate extends React.Component {
                 <h4 className="text-center text-white" >Cadastrar professor</h4>
                 <form onSubmit={this.submit}>
                     <div className="form-group">
-                        <label htmlFor="name">Nome</label>
+                        <label htmlFor="name">Nome*</label>
                         <input type="text" className="form-control" name="name" id="name" placeholder="Inserir nome do professor"
                             value={this.state.name} onChange={this.onChange} />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email">Email*</label>
                         <input type="email" className="form-control" name="email" id="email" placeholder="Inserir email do professor"
                             value={this.state.email} onChange={this.onChange} />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="department">Departamento</label>
+                        <label htmlFor="department">Departamento*</label>
                         <input type="text" className="form-control" name="department" id="department" placeholder="Inserir departamento do professor"
                             value={this.state.department} onChange={this.onChange} />
                     </div>

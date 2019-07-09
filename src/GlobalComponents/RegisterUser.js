@@ -34,12 +34,12 @@ class RegisterUser extends React.Component {
                 <h4>Cadastrar novo usuário</h4>
                 <form onSubmit={this.submit}>
                     <div className="form-group">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email">Email*</label>
                         <input type="email" className="form-control" name="email" id="email" placeholder="Inserir email"
                             value={email} onChange={this.onChange} />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">Password</label>
+                        <label htmlFor="password">Password*</label>
                         <input type="password" className="form-control" name="password" id="password" placeholder="Senha"
                             value={password} onChange={this.onChange} />
                     </div>
