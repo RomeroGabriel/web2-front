@@ -19,7 +19,8 @@ class Login extends React.Component {
             localStorage.setItem('token', res.data.token);
             this.props.history.push('/home');
         }, err => {
-            alert(err.response.data.error);
+            console.log(err);
+            alert('Erro ao logar!');
         })
     }
 

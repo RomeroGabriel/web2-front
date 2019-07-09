@@ -1,23 +1,21 @@
 import React from 'react';
 import axios from 'axios';
+import TeacherList from './Teacher';
+import TeacherCreate from './TeacherCreate';
 
 class Home extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
     axios.defaults.headers.common['authorization'] = localStorage.getItem("token");
   }
 
-  componentDidMount(){
-    axios.get('http://localhost:8080/orientation/getAll').then(res => {
-      console.log(res);
-    })
-  }
-
   render() {
     return (
-      <div className="container bg-info text-white" >
-        <h2 className="text-center">Bem vindo ao gerenciamento de orientações</h2>
+      <div className="container bg-info" >
+        <h2 className="text-center text-white">Bem vindo ao gerenciamento de orientações</h2>
+        <TeacherCreate />
+        <TeacherList />
       </div>
     );
   }
