@@ -38,12 +38,9 @@ class TeacherList extends React.Component {
 
 
     deleteTeacher = (id) => {
-        console.log(id)
         axios.delete('http://localhost:8080/teacher/delete/' + id).then(res => {
-            console.log(res);
             this.props.getTeacher();
         }, err => {
-            console.log(err)
             alert("Erro ao excluir professor")
         })
     }

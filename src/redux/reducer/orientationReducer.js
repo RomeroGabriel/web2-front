@@ -1,21 +1,20 @@
 const initState = {
-    teachers: []
+    orientations: []
 }
 
 
-const teacherReducer = (state = initState, action) => {
+const orientationReducer = (state = initState, action) => {
     switch (action.type) {
-        case 'SET_TEACHER':
+        case 'SET_ORIENTATION':
             state = {
                 ...state,
-                teachers: action.data
+                orientations: action.data
             };
             break;
         default:
             return state;
-
     }
     return state;
 };
 
-export default teacherReducer;
+export default orientationReducer;

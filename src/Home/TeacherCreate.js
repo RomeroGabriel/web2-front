@@ -32,7 +32,7 @@ class TeacherCreate extends React.Component {
     render() {
         return (
             <div>
-                <h4>Cadastrar professor</h4>
+                <h4 className="text-center text-white" >Cadastrar professor</h4>
                 <form onSubmit={this.submit}>
                     <div className="form-group">
                         <label htmlFor="name">Nome</label>
